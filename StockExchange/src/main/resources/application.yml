@@ -22,7 +22,18 @@ spring:
       enabled: true
       max-file-size: 10MB
       max-request-size: 11MB
+  cloud:
+    config:
+      uri: http://localhost:8090
+  boot:
+    admin:
+      client:
+        enabled: true
+        url: http://localhost:7777
 logging:
   level:
     org.springframework.web: DEBUG
-
+eureka:
+  client:
+    register-with-eureka: true
+  service-url: http://localhost:8761/eureka/
